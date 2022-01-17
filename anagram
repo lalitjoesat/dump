@@ -1,0 +1,32 @@
+s1="asdfghjk"
+s2="sakgfdhj"
+d1={}
+d2={}
+count=0
+for key,value in enumerate(s1):
+    count=1
+    if value in d1.keys():
+        count=d1[value]
+        d1[value]=count+1
+    else:
+        d1[value]=count
+for key,value in enumerate(s2):
+    count=1
+    if value in d2.keys():
+        count=d2[value]
+        d2[value]=count+1
+    else:
+        d2[value]=count
+xc=len(d1)    
+for value,se in enumerate(d1):
+    if se in d2.keys():
+        if d1[se]==d2[se]:
+            pass
+            if value==len(d1)-1:
+                print("An Anagram")
+        else:
+            print("Not an Anagram")
+            break
+    else:
+        print("Not an Anagram")
+        break
